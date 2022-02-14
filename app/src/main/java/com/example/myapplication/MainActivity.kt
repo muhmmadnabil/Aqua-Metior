@@ -19,5 +19,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.login.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
