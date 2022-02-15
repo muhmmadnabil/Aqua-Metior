@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".RegisterActivity">
 
     <FrameLayout
@@ -60,21 +60,21 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInLayoutRegPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtInLayoutRegPassword"
+            android:layout_marginTop="4dp"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/black"
-            android:layout_marginTop="4dp">
+            app:passwordToggleTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/reg_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginRight="50dp"
                 android:hint="@string/Password"
-                android:layout_marginTop="0dp"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,9 +102,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="50dp"
                 android:hint="@string/LastName"
-                android:layout_marginTop="4dp"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,8 +117,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginRight="50dp"
                 android:hint="@string/Email"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -132,22 +132,22 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50.0dip"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="50.0dip"
                 android:hint="@string/ConfirmEmailAddress"
-                android:layout_marginTop="4dp"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/reg_register"
+            android:id="@+id/btn_reg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            android:layout_marginTop="25dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="25dp"
-            android:layout_marginTop="25dp"
-            android:text="@string/Register"
             android:backgroundTint="@color/colorPrimary"
+            android:text="@string/Register"
             android:textColor="#F1f1f1"
             android:theme="@style/ButtonRegister" />
     </LinearLayout>
