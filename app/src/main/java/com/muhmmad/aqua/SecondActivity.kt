@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.muhmmad.aqua.databinding.ActivitySecondBinding
 
-class SecondActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity(), Contract {
 
     private lateinit var binding: ActivitySecondBinding
     private var phResult = false
@@ -20,8 +20,8 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //val user = MyFirebase().readData(1)
-
+        MyFirebase(this).readData()
+//        MyFirebase(this).addingUser(User(1, "Ahmed", "Shehatah", "", "", 0f, 0f, 0f, 0f, 0f, 0f))
 //        binding.tvPhResult.text = user.phValue.toString()
 //        binding.tvRgbResult.text = user.rgbValue.toString()
 //        binding.tvManganeseResult.text = user.manganeseValue.toString()
@@ -29,13 +29,13 @@ class SecondActivity : AppCompatActivity() {
 //        binding.tvSlatResult.text = user.saltValue.toString()
 //        binding.tvNitreseResult.text = user.nitrateValue.toString()
 
-
-        binding.tvPhResult.text = "5"
-        binding.tvRgbResult.text = "70"
-        binding.tvManganeseResult.text = "4"
-        binding.tvIronResult.text = "0.5"
-        binding.tvSlatResult.text = "900"
-        binding.tvNitreseResult.text = "70"
+//
+//        binding.tvPhResult.text = "5"
+//        binding.tvRgbResult.text = "70"
+//        binding.tvManganeseResult.text = "4"
+//        binding.tvIronResult.text = "0.5"
+//        binding.tvSlatResult.text = "900"
+//        binding.tvNitreseResult.text = "70"
 
         when (binding.tvPhResult.text) {
             0 downTo 7 -> {
@@ -97,5 +97,15 @@ class SecondActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onSuccess(user: User) {
+
+        binding.tvPhResult.text = user.phValue.toString()
+        binding.tvRgbResult.text = user.rgbValue.toString()
+        binding.tvManganeseResult.text = user.manganeseValue.toString()
+        binding.tvIronResult.text = user.ironValue.toString()
+        binding.tvSlatResult.text = user.saltValue.toString()
+        binding.tvNitreseResult.text = user.nitrateValue.toString()
     }
 }
