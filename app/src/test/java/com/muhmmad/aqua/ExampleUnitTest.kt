@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.muhmmad.aqua
 
 import org.junit.Test
 

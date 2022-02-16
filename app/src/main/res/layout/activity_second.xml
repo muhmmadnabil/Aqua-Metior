@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="القراءات"
+        android:text="مدى نقاء المياة"
         android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold"
@@ -52,7 +51,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
-                android:text="The thing"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -80,7 +79,7 @@
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
-                android:text="0"
+                android:text="300"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -95,6 +94,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tv_slat_result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -129,6 +129,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tv_nitrese_result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -148,7 +149,7 @@
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
-                android:text="0"
+                android:text="50"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -163,6 +164,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tv_rgb_result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -231,40 +233,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text=" شفافية الماء"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
+                android:id="@+id/tv_manganese_result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -299,6 +268,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tv_iron_result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -351,8 +321,13 @@
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Hello" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
